@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<!-- 
+	<bean name="/login.htm" class="mms.web.LoginCtrl"/>
+	<bean name="/search.htm" class="mms.web.SearchCtrl"/>
+	 -->
+	<bean name="/home.htm" class="mms.web.HomeCtrl"/>
+	<bean name="/admin/admin_table.htm" class="mms.web.admin.AdminTableCtrl"/>
+	<bean name="/admin/admin_form.htm" class="mms.web.admin.AdminFormCtrl"/>
+	<bean name="/admin/team_member_form.htm" class="mms.web.admin.TeamMemberFormCtrl"/>
+	
+	<bean name="/ball_test.htm" class="mms.web.BallTestCtrl"/>
+	
+	<bean name="/arrival.htm" class="mms.web.ArrivalCtrl"/>
+	<bean name="/shipping.htm" class="mms.web.ShippingCtrl"/>
+	<bean name="/manufacturing_plan.htm" class="mms.web.ManufacturingPlanCtrl"/>
+	<bean name="/manufacturing_results.htm" class="mms.web.ManufacturingResultsCtrl"/>
+	<bean name="/production_results.htm" class="mms.web.ProductionResultsCtrl"/>
+	<bean name="/user_master.htm" class="mms.web.UserMasterCtrl"/>
+	<bean name="/product_master.htm" class="mms.web.ProductMasterCtrl"/>
+	<bean name="/work_calendar.htm" class="mms.web.WorkCalendarCtrl"/>
+	<bean name="/specification_master.htm" class="mms.web.SpecificationMasterCtrl"/>
+	<!-- bean here -->
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages"/>
+	</bean>
+
+</beans>

@@ -1,0 +1,13 @@
+/*************  MAIN LAYOUT	*********** */
+#content {
+	font-family: 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', verdana, arial, helvetica, helve, sans-serif;	
+	position: relative;
+	width:95%;
+	top: 30px;	
+	scrollable:auto;
+	left:1%;
+}
+
+.clear{
+	clear:both;	
+}

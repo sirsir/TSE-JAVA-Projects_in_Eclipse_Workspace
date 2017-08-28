@@ -1,0 +1,245 @@
+@font-face {
+			font-family: gearbox;
+			src: url(/cog/fonts/GearBox.ttf);
+}
+body {
+	font-family: 'lucida sans unicode', 'lucida grande', 'Trebuchet MS', verdana, arial, helvetica, helve, sans-serif;
+}
+header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: #3E6DA3;
+	/* float: top; */
+	z-index:99999;
+	line-height: 40px;
+}
+
+#menu {
+	display:none;
+	float: left;
+	margin-top: -33px;
+	margin-left: -27px;
+	height: 40px;
+}
+#menu a {
+	color: #ccc;
+	text-decoration: none;
+}
+#menu a:active, #menu a:hover {
+	color: #fff;
+}
+
+.main,
+.container > header {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1.875em 3.125em 1.875em;
+}
+
+.main {
+	max-width: 69em;
+	padding-top: 2em;
+}
+
+nav {
+	z-index:99998;
+}
+
+.nav-item {
+	position: relative;
+	float: left;
+	vertical-align: middle;
+	margin-left: 14px;
+	color: white;
+}
+
+.nav-item #search {
+	width: 300px;
+}
+
+.nav-icon {
+	vertical-align:middle;
+	margin-top:2px;
+	padding:2px;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+
+
+
+#link-bar {
+	position: relative;
+	width: auto;
+	display: inline-block;
+	z-index: 99998;
+	/* height: 140px; */
+	/* left: 40px; */
+}
+
+
+
+.link li { /* Added this and moved much code to here */
+	position: relative; /* this was a key property missing from your code */
+	text-indent: 4px;
+	height: 6px;
+	background-color: #767676;
+	display: inline-block;
+	/* Dirty IE Hack */
+	zoom: 1;
+	*display: inline;
+	/* margin-right: 30px; Eliminated this */
+	margin-left: 0px;
+	padding: 10px 10px 7px 10px;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: top;
+	line-height: 4px;
+	top: -10px;
+	cursor: pointer;
+}
+
+.link li a {
+	color: white;
+}
+.link li img {
+	margin-top:-10px;
+}
+
+ul.link { /* this is irrelevant with the HTML you gave, but I added the class */
+	list-style: none;
+}
+
+li.link:first-child:after, li.link-current:after, li.link-middle:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-left: 10px solid #767676;
+    border-bottom: 12px solid transparent;
+    margin: -10px 10px 0 10px; 
+}
+li.link:last-child:before, li.link-current:before, li.link-middle:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    border-top: 11px solid transparent;
+    border-left: 10px solid white;
+    border-bottom: 12px solid transparent;
+    margin: -10px 0px 0 0px; 
+}
+
+li.link:first-child {
+    padding-left: 10px;
+    margin-left: 0;
+}
+li.link:last-child {
+    padding-right: 10px;
+}
+
+li.link-current {
+  background-color: #77a942; 
+}
+li.link-current:after {
+    border-left: 10px solid #77a942;
+}
+
+li.link-middle {
+	background-color: #767676;
+}
+ li.link-middle:after {
+	border-left: 10px solid #767676;
+}
+
+
+
+#prog-name {
+	color: white;
+	font-family: gearbox;
+	font-size: 20px;
+	font-style: italic;
+	margin-left: 10px;
+}
+#left-sidebar {
+	position:fixed;
+	top:40px;
+}
+.sidr {
+	display:none;
+	position:fixed;
+	left:0;
+	z-index:990;
+	width:260px;
+	overflow-x:none;
+	overflow-y:auto;
+	font-family:tahoma,verdana,arial,sans-serif,"lucida grande";
+	font-size:12px;
+	background-color: rgba(240,240,240,0.2);
+	border: 1px solid rgb(212,212,212);
+    border-radius: 0 0 3px 3px;
+	-moz-box-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+}
+.sidr.right {
+	right:-260px
+}
+.sidr.left {
+	left:-260px;
+}
+#sidr ul {
+	list-style: none;
+	/* margin-left: -20px; */
+}
+#sidr li {
+	padding: 4px;
+}
+#left-sidebar a {
+	text-decoration: none;
+}
+#left-menu-toggle img {
+	border-top: 1px solid rgb(212,212,212);
+	border-right: 1px solid rgb(212,212,212);
+	border-bottom: 1px solid rgb(212,212,212);
+    border-radius: 0 3px 3px 0;
+    margin: 2px 0 0 0;
+    background-color: blue;
+	z-index:991;
+}
+
+#header-gap {
+	position: relative;
+	height: 50px;
+	display: inline-block;
+}
+#nav-gap {
+	position: relative;
+	margin-left: 40px;
+	display: inline-block;
+}
+
+@media screen and (max-width: 480px) {
+	#left-sidebar {
+		display: none;
+	}
+	.full-content {
+		left: 0px;
+	}
+	.half-content {
+		left: -260px;
+	}
+	#menu {
+		display: inline-block;
+	}
+	#prog-name {
+		position: fixed;
+		top: 0px;
+		left: 44px;
+	}
+}
+  
